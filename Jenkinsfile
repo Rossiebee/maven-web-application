@@ -19,8 +19,8 @@ pipeline{
       }
     }
     stage('3Checkstyle Analysis'){
-			steps{
-				sh 'mvn checkstyle:checkstyle'
+      steps{
+	sh 'mvn checkstyle:checkstyle'
 			}
     stage('4CodeQuality'){
       steps{
