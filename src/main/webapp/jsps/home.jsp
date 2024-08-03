@@ -9,11 +9,11 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Landmark Technologies.</h1>
+<h1 align="center">Welcome to Teqsify IT Consult.</h1>
 <h2 align="center"> We are supporting the Ebay Black Friday Project.
-	Landmark Technologies is a software development company. 
-	Class26 will run from October 2, 2021.
-	The shout of the King Jesus is in our midst. HE IS OUR SUCCESS ACCESS KEY</h2>
+	Teqsify is a Linux and DevOps Training company. 
+	Our First class is going to end sometime in August, 2024.
+	WELCOME TO YOUR MILLION DOLLAR JOurney!.</h2>
 <hr>
 <div style="text-align: center;">
 	<span>
