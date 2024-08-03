@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Teqsify IT Consult.</h1>
-<h2 align="center"> We are supporting the Ebay Black Friday Project.
+<h2 align="center"> We are supporting the EbayProject.
 	Teqsify is a Linux and DevOps Training company. 
 	Our First class is going to end sometime in August, 2024.
 	WELCOME TO YOUR MILLION DOLLAR JOurney!.</h2>
@@ -23,9 +23,9 @@
 		Teqsify IT Company, 
 		United States and Ghana
 		+1 437 215 2483,
-		teqsifydevops@gmail.com
+		teqsify.it@gmail.com
 		<br>
-		<a href="mailto:teqsifydevops@gmail.com">Mail to Teqsify Company</a>
+		<a href="mailto:teqsify.it@gmail.com">Mail to Teqsify Company</a>
 	</span>
 </div>
 <hr>
@@ -33,7 +33,7 @@
 <hr>
 <hr>
 <p align=center>Teqsify IT Company - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2019 by <a href="http://teqsify.com/">Teqsify IT Company</a> </small></p>
+<p align=center><small>Copyrights 2022 by <a href="http://teqsify.com/">Teqsify IT Company</a> </small></p>
 
 </body>
 </html>
