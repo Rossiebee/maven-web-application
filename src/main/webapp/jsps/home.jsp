@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MylandmarkTech.com- Home Page</title>
+<title>Teqsify.com- Home Page</title>
 <link href="images/log4.png" rel="icon">
 </head>
 </head>
@@ -20,20 +20,20 @@
 		<img src="images/mylandmarklogo.jpg" alt="" width="200">
 	</span>
 	<span style="font-weight: bold;">
-		Landmark Technology, 
-		Toronto, Ontario, Canada
+		Teqsify IT Company, 
+		United States and Ghana
 		+1 437 215 2483,
-		mylandmarktech@gmail.com
+		teqsifydevops@gmail.com
 		<br>
-		<a href="mailto:mylandmarktech@gmail.com">Mail to Landmark Technologies</a>
+		<a href="mailto:teqsifydevops@gmail.com">Mail to Teqsify Company</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>Landmark Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2019 by <a href="http://mylandmark.tech/">Landmark Technologies</a> </small></p>
+<p align=center>Teqsify IT Company - Consultant, Training, Development Center.</p>
+<p align=center><small>Copyrights 2019 by <a href="http://teqsify.com/">Teqsify IT Company</a> </small></p>
 
 </body>
 </html>
