@@ -10,8 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Teqsify IT Consult.</h1>
-<h2 align="center"> We are supporting the EbayProject.
-	Teqsify is a Linux and DevOps Training company. 
+<h2 align="center"> Teqsify is an Information Technology Company and our goal is to support and provide extensive training for Linux and DevOps.
 	Our First class is going to end sometime in August, 2024.
 	WELCOME TO YOUR MILLION DOLLAR JOurney!.</h2>
 <hr>
