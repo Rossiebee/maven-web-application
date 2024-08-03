@@ -13,8 +13,8 @@
 	<description>Maven Web Project for Java Project</description>
 
 	<organization>
-		<name>Landmark Technologies</name>
-		<url>http://landmarktechnologies.com/</url>
+		<name>Teqsify Company</name>
+		<url>http://teqsify.com/</url>
 	</organization>
 
 	<properties>
@@ -97,13 +97,13 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Releases Nexus Repository</name>
+	      <name>Teqsify Company Releases Nexus Repository</name>
 	      <url>http://192.168.1.57:8081/repository/webapp-fe-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Snapshot Nexus Repository </name>
+	      <name>Teqsify Company Snapshot Nexus Repository </name>
 	      <url>http://192.168.1.57:8081/repository/Webapp-fe-snapshots/</url>
 	    </snapshotRepository>
 	    
