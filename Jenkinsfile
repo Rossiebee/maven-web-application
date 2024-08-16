@@ -21,7 +21,7 @@ pipeline{
     stage('3Checkstyle Analysis'){
       steps{
 	sh 'mvn checkstyle:checkstyle'
-			}
+/*			}
     stage('4CodeQuality'){
       steps{
         sh "echo 'Perfoming CodeQualityAnalysis' "
@@ -34,6 +34,12 @@ pipeline{
         sh "mvn deploy"
       }
     } 
+*/	      
+   stage('6.ApprovaL Gate'){
+     timeout(time:10, unit: 'HOURS'){
+	input message: 'Application is ready for deployment, Please review and approve'
+     }
+   }
 /*
    stage('8deploy2prod'){
       steps{
