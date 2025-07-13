@@ -42,7 +42,7 @@ jobs:
       run: docker images
    
     - name: Docker Login
-      run: docker login -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
+      run: docker login --username=$CONTAINER_REGISTRY_USERNAME --password=$CONTAINER_REGISTRY_PASSWORD
     - name: Docker Push Image
       run: docker push $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
  
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker Login
-        run: docker login -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
+        run: docker login --username=$CONTAINER_REGISTRY_USERNAME --password=$CONTAINER_REGISTRY_PASSWORD
       
       - name: Docker run
         run: docker run -d -p 8080:80 $CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
