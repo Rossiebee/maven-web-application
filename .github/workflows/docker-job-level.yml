@@ -12,9 +12,9 @@ jobs:
         IMAGE_NAME: teqsity-maven-web-app
         IMAGE_TAG: v.1
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: teqsify-webapp
+    # defaults:
+    #   run:
+    #     working-directory: teqsify-webapp
 
     steps:
     - name: Checkout repository
@@ -23,8 +23,8 @@ jobs:
     - name: List repo root structure
       run: ls -al
 
-    - name: Debug - List webapp directory content
-      run: ls -al teqsify-webapp || echo "teqsify-webapp folder not found"
+    # - name: Debug - List webapp directory content
+    #   run: ls -al teqsify-webapp || echo "teqsify-webapp folder not found"
        
     - name: Set up JDK
       uses: actions/setup-java@v4

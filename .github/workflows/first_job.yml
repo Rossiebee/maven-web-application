@@ -25,4 +25,4 @@ jobs:
                 echo "Present Working Directory is"
                 pwd
                 echo "Reading dockerfile"
-                cat dockerfile
+                cat Dockerfile
