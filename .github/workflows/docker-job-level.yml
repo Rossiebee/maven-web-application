@@ -48,11 +48,17 @@ jobs:
  
   docker_deploy: 
     needs: docker_build
+    env:
+        CONTAINER_REGISTRY: docker.io
+        CONTAINER_REGISTRY_USERNAME: rossiebee
+        CONTAINER_REGISTRY_PASSWORD: Pink325173$
+        IMAGE_NAME: teqsity-maven-web-app
+        IMAGE_TAG: v.1
     runs-on: ubuntu-latest
     steps:
       - name: Docker Login
         run: docker login --username=$CONTAINER_REGISTRY_USERNAME --password=$CONTAINER_REGISTRY_PASSWORD
       
       - name: Docker run
-        run: docker run -d -p 8080:8080 $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+        run: docker run -d -p 8080:80 $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
         
