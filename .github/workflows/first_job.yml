@@ -1,0 +1,28 @@
+name: First Workflow
+
+on:
+  - push
+jobs:
+    first_job:
+        name: Rossie's First Job + dockerfile
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+            # - name: Run a one-line script
+            #   run: echo Hello, world!
+            # - name: Run a multi-line script
+            #   run: |
+            #     echo Add other actions to build,
+            #     echo test, and deploy your project.
+            - name: List and Read files
+              run: |
+                echo "Welcome to testing GitHub Actions with dockerfile"
+                echo "Listing hidden files"
+                ls -1a
+                echo "current user is"
+                whoami
+                echo "Present Working Directory is"
+                pwd
+                echo "Reading dockerfile"
+                cat dockerfile

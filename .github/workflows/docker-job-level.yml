@@ -1,0 +1,58 @@
+name: Docker Workflow
+
+on:
+  - push
+
+jobs:
+  docker_build:
+    env:
+        CONTAINER_REGISTRY: docker.io
+        CONTAINER_REGISTRY_USERNAME: rossiebee
+        CONTAINER_REGISTRY_PASSWORD: Pink325173$
+        IMAGE_NAME: teqsity-maven-web-app
+        IMAGE_TAG: v.1
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: teqsify-webapp
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: List repo root structure
+      run: ls -al
+
+    - name: Debug - List webapp directory content
+      run: ls -al teqsify-webapp || echo "teqsify-webapp folder not found"
+       
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+      
+    - name: Maven Build
+      run: mvn clean package -DskipTests
+    
+    - name: Docker Build Image
+      run: docker build -t $CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG .
+   
+    - name: View Docker Images
+      run: docker images
+   
+    - name: Docker Login
+      run: docker login -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
+    - name: Docker Push Image
+      run: docker push $CONTAINER_REFISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+ 
+  docker_deploy: 
+    needs: docker_build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker Login
+        run: docker login -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
+      
+      - name: Docker run
+        run: docker run -d -p 8080:80 $CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+        
