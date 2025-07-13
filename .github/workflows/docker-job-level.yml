@@ -61,7 +61,7 @@ jobs:
       
       - name: Docker run
         run: |
-          docker run -d -p 8080:8080 $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+          docker run -d -p 8080:8080 --name teqsify-webapp $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
           sleep 5 #give app time to start
-          curl --fail http://localhost:8080 || (docker logs && exit 1)
+          curl --fail http://localhost:8080 || (docker logs teqsify-webapp && exit 1)
         
