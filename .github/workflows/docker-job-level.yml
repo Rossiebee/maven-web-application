@@ -44,7 +44,7 @@ jobs:
     - name: Docker Login
       run: docker login -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
     - name: Docker Push Image
-      run: docker push $CONTAINER_REFISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+      run: docker push $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
  
   docker_deploy: 
     needs: docker_build
