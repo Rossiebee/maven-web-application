@@ -9,7 +9,7 @@ jobs:
         CONTAINER_REGISTRY: docker.io
         CONTAINER_REGISTRY_USERNAME: rossiebee
         CONTAINER_REGISTRY_PASSWORD: Pink325173$
-        IMAGE_NAME: teqsity-maven-web-app
+        IMAGE_NAME: teqsify-maven-web-app
         IMAGE_TAG: v.1
     runs-on: ubuntu-latest
     # defaults:
@@ -52,7 +52,7 @@ jobs:
         CONTAINER_REGISTRY: docker.io
         CONTAINER_REGISTRY_USERNAME: rossiebee
         CONTAINER_REGISTRY_PASSWORD: Pink325173$
-        IMAGE_NAME: teqsity-maven-web-app
+        IMAGE_NAME: teqsify-maven-web-app
         IMAGE_TAG: v.1
     runs-on: ubuntu-latest
     steps:
@@ -63,5 +63,5 @@ jobs:
         run: |
           docker run -d -p 8080:8080 --name teqsify-webapp $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
           sleep 5 #give app time to start
-          curl --fail http://localhost:8080 || (docker logs teqsify-webapp && exit 1)
+          curl --fail http://localhost:8080/maven-web-app || (docker logs teqsify-webapp && exit 1)
         
