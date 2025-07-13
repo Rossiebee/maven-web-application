@@ -1,4 +1,4 @@
-name: Docker Workflow
+name: Docker Workflow Job Level
 
 on:
   - push
@@ -43,7 +43,7 @@ jobs:
    
     - name: Docker Login
       run: docker login --username=$CONTAINER_REGISTRY_USERNAME --password=$CONTAINER_REGISTRY_PASSWORD
-      
+
     - name: Docker Push Image
       run: docker push $CONTAINER_REGISTRY/$CONTAINER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG
  
