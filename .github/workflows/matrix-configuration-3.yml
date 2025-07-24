@@ -1,0 +1,31 @@
+# For testing on different servers (Advanced Way) using fail-fast and max-paralell
+name: Matrix Configuration 3
+
+on:
+  push: 
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    environment: develop
+    strategy:
+      fail-fast: false #Using fail-fast arguments will not affect jobs running in parallel
+      max-parallel: 3 #This will run 3 jobs in parallel. in other words, 3 jobs will run at the same time or in batches if there are multiple jobs.
+      matrix:
+        os: [ubuntu-latest, ubuntu-22.04, windows-latest]
+        images: [hello-world, alpine]
+        exclude: #Don't run on this machine/server
+          - images: alpine 
+          - os: windows-latest
+        include:
+          - images: amd64/alpine #include this image on this machine/server. 
+          - os: ubuntu-22.04
+       
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Echo Docker Details
+        run: docker info
+
+      - name: Run Docker Images on ${{ matrix.os }}
+        run: docker run ${{ matrix.images }}
