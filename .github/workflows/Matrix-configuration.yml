@@ -1,0 +1,35 @@
+# For testing on different servers
+name: Matrix Configuration
+
+on:
+  push: 
+  workflow_dispatch:
+
+jobs:
+  deploy-on-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Echo Docker Details
+      run: docker info
+
+    - name: Run Docker Images
+      run: docker run "hello-world"
+
+  deploy-on-windows: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Echo Docker Details
+      run: docker info
+
+    - name: Run Docker Images
+      run: docker run "hello-world"  
+    
+  
+    
+

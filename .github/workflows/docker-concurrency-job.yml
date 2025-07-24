@@ -55,8 +55,10 @@ jobs:
         run: docker login --username=${{vars.CONTAINER_REGISTRY_USERNAME}} --password=${{secrets.CONTAINER_REGISTRY_PASSWORD}}
       
       - name: Docker run
+        timeout-minutes: 1
         run: |
           docker run -d -p 8080:8080 --name teqsify-webapp ${{env.CONTAINER_REGISTRY}}/${{vars.CONTAINER_REGISTRY_USERNAME}}/${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
           sleep 5 #give app time to start
           curl --fail http://localhost:8080/maven-web-app || (docker logs teqsify-webapp && exit 1)
+          sleep 300
 
