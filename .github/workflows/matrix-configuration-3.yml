@@ -16,10 +16,10 @@ jobs:
         images: [hello-world, alpine]
         exclude: #Don't run on this machine/server
           - images: alpine 
-          - os: windows-latest
+            os: windows-latest
         include:
           - images: amd64/alpine #include this image on this machine/server. 
-          - os: ubuntu-22.04
+            os: ubuntu-22.04
        
     runs-on: ${{ matrix.os }}
 
