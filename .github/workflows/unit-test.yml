@@ -46,6 +46,9 @@ jobs:
           name: junit-test-reports
           path: target/surefire-reports/
 
+      - name: List test report files
+        run: ls -l target/surefire-reports || echo "No reports found"
+
       - name: Docker Build Image
         run: docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ vars.CONTAINER_REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
 
