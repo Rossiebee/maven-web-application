@@ -1,0 +1,25 @@
+name: Deploy to various Environments
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy_dev:
+    uses: ./.github/workflows/reusable-workflow.yml
+
+    with: 
+        environment: dev
+
+  deploy_staging:
+    needs: deploy_dev
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      environment: staging
+
+  deploy_prod:
+    needs: deploy_staging
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      environment: production
